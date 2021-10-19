@@ -34,6 +34,7 @@ class FactoryCodeGenerator(
         ).apply {
             addType(
                 TypeSpec.classBuilder(generatedClassName)
+                    .addModifiers(KModifier.INTERNAL)
                     .addSuperinterface(superInterface)
                     .addCreateInstanceFunction(
                         className,
