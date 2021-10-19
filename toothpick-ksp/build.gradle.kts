@@ -1,4 +1,5 @@
 plugins {
+  `java-library`
   kotlin("jvm")
   `maven-publish`
 }
@@ -37,6 +38,8 @@ publishing {
       groupId = "org.github.inorichi"
       artifactId = "toothpick-ksp"
       version = "1.0"
+
+      from(components["java"])
     }
   }
 }
