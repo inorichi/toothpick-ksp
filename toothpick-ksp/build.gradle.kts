@@ -30,3 +30,13 @@ kotlin {
 tasks.withType<Test> {
   useJUnitPlatform()
 }
+
+publishing {
+  publications {
+    create<MavenPublication>("maven") {
+      groupId = "org.github.inorichi"
+      artifactId = "toothpick-ksp"
+      version = "1.0"
+    }
+  }
+}
